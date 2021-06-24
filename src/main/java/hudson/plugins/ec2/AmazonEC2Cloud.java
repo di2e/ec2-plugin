@@ -42,6 +42,7 @@ import hudson.Extension;
 import hudson.Util;
 import hudson.model.Computer;
 import hudson.model.Failure;
+import hudson.model.ItemGroup;
 import hudson.model.Node;
 import hudson.model.labels.LabelAtom;
 import hudson.plugins.ec2.util.AmazonEC2Factory;
@@ -62,6 +63,7 @@ import javax.annotation.Nullable;
 import javax.servlet.ServletException;
 import jenkins.model.Jenkins;
 import org.apache.commons.lang.BooleanUtils;
+import org.kohsuke.stapler.AncestorInPath;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.QueryParameter;
@@ -87,8 +89,6 @@ public class AmazonEC2Cloud extends EC2Cloud {
     private String region;
 
     private String altEC2Endpoint;
-
-    private static final Logger LOGGER = Logger.getLogger(AmazonEC2Cloud.class.getName());
 
     public static final String CLOUD_ID_PREFIX = "ec2-";
 

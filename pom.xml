@@ -35,7 +35,7 @@ THE SOFTWARE.
     </parent>
 
     <artifactId>ec2</artifactId>
-    <version>1.62</version>
+    <version>1.62-di2e</version>
     <packaging>hpi</packaging>
 
     <name>Amazon EC2 plugin</name>
